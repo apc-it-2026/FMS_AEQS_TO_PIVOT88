@@ -1,0 +1,23 @@
+# Visual Studio
+.vs/
+*.user
+*.suo
+
+# Build folders everywhere
+bin/
+obj/
+**/bin/
+**/obj/
+Debug/
+Release/
+**/Debug/
+**/Release/
+
+# Browser binaries
+chrome-win64/
+chrome-headless-shell-win64/
+
+# Compiled binaries
+*.dll
+*.exe
+*.pdb

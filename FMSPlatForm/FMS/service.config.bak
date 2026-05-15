@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+This configuration file is for server configuraiton.
+Current version is 1.2.0.3
+-->
+<service_list>
+  <service type="file">
+    <database>A31</database>
+    <netserver_ip>10.129.127.50</netserver_ip>
+    <netdisk_rootpath>\\10.129.127.50\monitor\REQUEST</netdisk_rootpath>
+    <reply_folder>\\10.129.127.50\monitor\REPLY</reply_folder>
+    <other_folder1>\\10.129.127.50\monitor\OTHER1</other_folder1>
+    <other_folder2>
+    </other_folder2>
+    <netdisk_user>fms_test</netdisk_user>
+    <netdisk_pwd>fms_tes</netdisk_pwd>
+    <instance_class>Compal.FMS.A31AFTImpl.A31AFTClient</instance_class>
+    <interval>2000</interval>
+    <netfolder_check>Y</netfolder_check>
+    <maxprcfiles>10</maxprcfiles>
+    <filtertype>*.STS</filtertype>
+    <line_name>ASSYA</line_name>
+    <section_name>ASSYA</section_name>
+    <group_name>ASSYA</group_name>
+    <station_name>ASSYA</station_name>
+    <folder_type>remote</folder_type>
+    <dll_file>D:\FMS_Source\FMS1.2\FMS\bin\Debug\A31AFT.dll</dll_file>
+  </service>
+  <service type="crawler">
+    <database>CIM</database>
+    <netserver_ip>10.114.212.45</netserver_ip>
+    <instance_class>Compal.CIM.MCDImpl.MCDClient</instance_class>
+    <dll_file>D:\Test\FMS1.3\ProViewMCDImpl.dll</dll_file>
+    <netdisk_rootpath>\\10.114.212.45\Data</netdisk_rootpath>
+    <reply_folder>\\10.114.212.45\monitor\REPLY</reply_folder>
+    <other_folder1>\\10.114.212.45\monitor\OTHER1</other_folder1>
+    <netfolder_check>Y</netfolder_check>
+    <folder_type>remote</folder_type>
+    <netdisk_user>create</netdisk_user>
+    <netdisk_pwd>create</netdisk_pwd>
+    <maxprcfiles>10</maxprcfiles>
+    <interval>6</interval>
+    <filtertype>*.MCD</filtertype>
+    <backup>Y</backup>
+    <plant_code>KS1</plant_code>
+    <line_name>SMTK</line_name>
+    <section_name>ASSYA</section_name>
+    <group_name>ASSYA</group_name>
+    <station_name>KS1KS</station_name>
+    <other_folder2>
+    </other_folder2>
+  </service>
+</service_list>
