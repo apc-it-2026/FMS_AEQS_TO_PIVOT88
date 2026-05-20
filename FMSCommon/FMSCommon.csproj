@@ -213,6 +213,7 @@
     <Compile Include="Compal\FMS\Kernel\Operations\Run_MES_Operations.cs" />
     <Compile Include="Compal\FMS\Kernel\Operations\Run_TempAndHumid_Data_Transfer.cs" />
     <Compile Include="Compal\FMS\Kernel\Operations\Run_TSM_Operations.cs" />
+    <Compile Include="Compal\FMS\Kernel\Operations\Warehouse_Rcpt_Alert.cs" />
     <Compile Include="Compal\FMS\Kernel\Operations\WH7000.cs" />
     <Compile Include="Compal\FMS\Kernel\Threading\FileMonitor.cs" />
     <Compile Include="Compal\FMS\Kernel\Threading\FileMonitorBuilder.cs" />

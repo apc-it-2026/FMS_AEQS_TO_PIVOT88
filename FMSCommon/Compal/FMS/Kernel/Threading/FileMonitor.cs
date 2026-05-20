@@ -152,7 +152,9 @@ namespace Compal.FMS.Kernel.Threading
                 DelayPOS etoe = new DelayPOS();
                 Run_MES_Operations mes = new Run_MES_Operations();
                 Lack_Of_Material lom = new Lack_Of_Material();
-                WH7000 wh = new WH7000();
+                WH7000 wh = new WH7000(); 
+                Warehouse_Rcpt_Alert wra = new Warehouse_Rcpt_Alert(); 
+
 
                 if (tempSrvInfo.Operation == "AQL Outbound")
                 {
@@ -376,6 +378,14 @@ namespace Compal.FMS.Kernel.Threading
                         wh.GetWH7000Materials(tempSrvInfo);
                     }
                 }
+                else if (tempSrvInfo.Operation == "Warehouse_Rcpt_Alert")
+                {
+                    DateTime today = DateTime.Now;
+                    if (today.DayOfWeek != DayOfWeek.Sunday)
+                    {
+                        wra.WarehouseRepotRcptData(tempSrvInfo);
+                    }
+                } 
                 else if (tempSrvInfo.Operation == "AQL_PO_Receive_Alert")
                 {
                    aeqs.Send_AQL_PO_Receive_Alert(tempSrvInfo);
